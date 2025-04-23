@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head><body>
+  <div id="navbar"></div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>about</h1>
+        </div>
+    </section>
+ <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+
+    </script>
+</body>
+</html>
